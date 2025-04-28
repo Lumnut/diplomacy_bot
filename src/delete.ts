@@ -36,7 +36,7 @@ client.once('ready', async () => {
 
 						for (const message of messages.values()) {
 							try {
-								await message.delete() // await to respect rate limits
+								await message.delete()
 							} catch (error) {
 								console.error(`Failed to delete message: ${error}`)
 							}
@@ -44,10 +44,10 @@ client.once('ready', async () => {
 
 						// Get the ID of the oldest message to paginate properly
 						lastMessageId = messages.last()?.id
-
 						if (!lastMessageId) {
 							break // no more messages to paginate
 						}
+
 						messages = await channel.messages.fetch({ limit: 100, before: lastMessageId })
 					}
 				}
