@@ -1,22 +1,23 @@
 {
-    "name": "diplomacy_bot",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "start": "npx ts-node src/index.ts",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "description": "",
-    "dependencies": {
-        "discord.js": "^14.19.1",
-        "dotenv": "^16.5.0"
-    },
-    "devDependencies": {
-        "@types/node": "^22.15.3",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.8.3"
-    }
+	"name": "diplomacy_bot",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"public": "npx ts-node src/public.ts",
+		"delete": "npx ts-node src/delete.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"discord.js": "^14.19.1",
+		"dotenv": "^16.5.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	}
 }
