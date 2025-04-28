@@ -1,6 +1,7 @@
 # diplomacy_bot
 
 A simple discord bot to aid communication for the game Diplomacy.
+
 It is designed to be run manually at game end in 1 of 2 modes:
 
 ### public mode:
