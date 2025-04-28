@@ -11,7 +11,7 @@ client.once('ready', async () => {
 	console.log(`Logged in as ${client.user?.tag}`)
 
 	// Whitelist of allowed channel names
-	const allowedChannelNames = ['announcements', 'meta-gaming', 'russia-austria-chat']
+	const allowedChannelNames = ['announcements', 'meta-gaming']
 
 	const guilds = client.guilds.cache
 	for (const guild of guilds.values()) {
@@ -26,7 +26,7 @@ client.once('ready', async () => {
 				console.log(`Deleted channel: ${channel.name}`)
 			} else {
 				// If the channel is in the whitelist, delete all messages in it
-				if (channel.name != 'russia-austria-chat') {
+				if (channel.name != 'meta-gaming') {
 					// Delete all messages in the allowed channels
 					let messages = await channel.messages.fetch({ limit: 100 })
 					let lastMessageId: string | undefined
