@@ -69,7 +69,16 @@ client.once('ready', async () => {
 				continue
 			}
 
+			// Set Nickname
 			await member[1].setNickname(player.nickname)
+
+			// Remove all existing roles
+			const existingRoles = member[1].roles.cache.filter((r) => r.name !== '@everyone')
+			if (existingRoles.size > 0) {
+				await member[1].roles.remove(existingRoles)
+			}
+
+			// Add new role
 			await member[1].roles.add(role)
 			console.log(`Member Set: ${member[1].user.username}`)
 		}
